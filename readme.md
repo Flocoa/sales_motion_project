@@ -6,10 +6,19 @@ Ce projet est un pipeline d'ingestion de données automatisé (*ELT*) qui extrai
 
 ## Architecture du projet
 
-├── .gitignore                   # Fichiers et dossiers ignorés (env, checkpoints, etc.)
-├── README.md                    # Documentation du projet
-├── dbt                          # gestion des couches de données
-└── sales_motion_api_request.ipynb # Notebook d'ingestion (API -> BigQuery)
+```text
+.
+├── .gitignore                      # Fichiers et dossiers ignorés (env, checkpoints, etc.)
+├── README.md                       # Documentation du projet
+├── sales_motion_api_request.ipynb  # Notebook d'ingestion (API -> BigQuery)
+└── salesmotion_dbt/                # Projet dbt Core
+    ├── dbt_project.yml             # Configuration dbt
+    ├── profiles.yml                # Profil de connexion BigQuery
+    └── models/                     # Modèles SQL (staging, marts)
+        └── staging/
+            ├── sources.yml
+            └── stg_job_openings.sql
+```
 
 ---
 
