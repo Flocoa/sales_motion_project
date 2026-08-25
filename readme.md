@@ -1,4 +1,4 @@
-# Salesmotion Data Pipeline (Python & BigQuery)
+# Salesmotion Data Pipeline (Python & BigQuery & DBT Core)
 
 Ce projet est un pipeline d'ingestion de données automatisé (*ELT*) qui extrait les informations d'entreprises et leurs offres d'emploi depuis l'API **Salesmotion**, puis les charge dans **Google BigQuery** pour préparer la modélisation sous **dbt Core**.
 
@@ -16,7 +16,7 @@ Ce projet est un pipeline d'ingestion de données automatisé (*ELT*) qui extrai
     ├── profiles.yml                # Profil de connexion BigQuery
     └── models/                     # Modèles SQL (staging, marts)
         └── staging/
-            ├── sources.yml
+            ├── schema_source.yml
             └── stg_job_openings.sql
 ```
 
@@ -27,8 +27,10 @@ Ce projet est un pipeline d'ingestion de données automatisé (*ELT*) qui extrai
 - **Python 3.10+**
 - Un compte **Google Cloud Platform (GCP)** avec BigQuery activé.
 - Une clé API valide **Salesmotion**.
-- Un fichier de variables d'environnement `.env` configuré à la racine :
+- Un fichier de variables d'environnement `.env` configuré à la racine avec comme variable :
 
 SALESMOTION_API_KEY="votre_cle_api"
+
 GOOGLE_APPLICATION_CREDENTIALS="votre_cle_json"
+
 GCP_PROJECT_ID="votre_project_id_gcp"
