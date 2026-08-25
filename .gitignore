@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.ipynb_checkpoints/sales_motion_api_request-checkpoint.ipynb
