@@ -1,0 +1,9 @@
+# fichiers de clé api / json
+.env
+*.json
+
+# fichiers Python temporaires et environnements virtuels
+__pycache__/
+*.pyc
+.venv/
+venv/
