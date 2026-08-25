@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: sales-motion-projec
+    schema: sales_motion_raw
+    tables:
+      - name: jobs
+        description: "Offres d'emploi brutes ingérées depuis l'API Salesmotion."

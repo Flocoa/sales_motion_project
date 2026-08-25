@@ -8,3 +8,12 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/sales_motion_api_request-checkpoint.ipynb
+
+
+# Logs dbt
+logs/
+dbt_internal_packages/
+*.log
+
+# Fichiers de build/compilation dbt (fichiers temporaires)
+target/
