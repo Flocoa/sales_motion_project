@@ -14,10 +14,14 @@ Ce projet est un pipeline d'ingestion de données automatisé (*ELT*) qui extrai
 └── salesmotion_dbt/                # Projet dbt Core
     ├── dbt_project.yml             # Configuration dbt
     ├── profiles.yml                # Profil de connexion BigQuery
-    └── models/                     # Modèles SQL (staging, marts)
+    └── models/                     # Modèles SQL
+        └── schema_source.yml/
+    (staging, marts)
         └── staging/
-            ├── schema_source.yml
+            ├── schema_stg.yml
             └── stg_job_openings.sql
+        └── marts/
+            └── mart_company_hiring_summary.sql
 ```
 
 ---
