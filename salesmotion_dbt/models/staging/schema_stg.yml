@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_jobs_openings
+    description: "Table de staging nettoyée des offres d'emploi Salesmotion."
+    columns:
+      - name: job_id
+        description: "Clé primaire de l'offre d'emploi."
+        tests:
+          - unique
+          - not_null
+
+      - name: company_domain
+        description: "Domaine de l'entreprise recruteuse."
+        tests:
+          - not_null
+
+      - name: job_title
+        description: "Intitulé du poste."
+        tests:
+          - not_null
